@@ -10,4 +10,14 @@ export default defineConfig({
   //       },
   //     },
   //   },
+  server: {
+    cors: false,
+    proxy: {
+      "/ip": {
+        target: "https://ipv4.icanhazip.com/",
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 });
