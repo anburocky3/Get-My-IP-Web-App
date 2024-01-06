@@ -1,11 +1,15 @@
 const ipAddressPlaceholder = document.querySelector("#ipAddress");
 // Get the ip address from this url: https://ipv4.icanhazip.com/
+import hello from "../../netlify/functions/index";
 
 async function fetchIP() {
   const ipDataReq = await fetch("/ip");
   const ipAddress = await ipDataReq.text();
   // const ipData = await ipDataReq.json();
   console.log(ipAddress);
+
+  const result = await hello();
+  console.log("s", result);
 }
 
 fetchIP();
