@@ -1,44 +1,18 @@
-# Your App Title
+# Get My IP Web App
 
-Write app description in detail!
+Get the IP of the visitor.
 
 #### Screenshots
 
-[Yet to be uploaded]
+![Screenshot](./screenshots/1.png)
 
 ## 🎉 Check it yourself!
 
-| 🚧 Build Status  | [![Netlify Status](https://img.shields.io/github/actions/workflow/status/anburocky3/festival-greeting-app/deploy.yml?logo=github&label=Live)](https://app.netlify.com/sites/cyberdude-internship/deploys) |
-| ---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ✅ Live Website: | https://anburocky3.github.io/vite-html-tailwind                                                                                                                                                           |
+| 🚧 Build Status  | [![Deploy to GH Pages](https://github.com/anburocky3/Get-My-IP-Web-App/actions/workflows/deploy.yml/badge.svg)](https://github.com/anburocky3/Get-My-IP-Web-App/actions/workflows/deploy.yml) |
+| ---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ✅ Live Website: | [https://anburocky3.github.io/Get-My-IP-Web-App/](https://anburocky3.github.io/Get-My-IP-Web-App/)                                                                                            |
 
 ---
-
-### GitHub Template
-
-[Create a repo from this template on GitHub](https://github.com/anburocky3/vite-html-tailwind/generate).
-
-### Clone to local
-
-If you prefer to do it manually with the cleaner git history
-
-```bash
-npx degit anburocky3/vite-html-tailwind my-app
-cd my-app
-npm install # Install dependencies
-```
-
-## Checklist
-
-When you use this template, try follow the checklist to update your info properly
-
-- [ ] Change the author name in `LICENSE`
-- [ ] Change the title and unnecessary info in `index.html`
-- [ ] According to your usage, modify READMEs
-
-And, enjoy :)
-
-## Usage
 
 ### Development
 
@@ -71,5 +45,3 @@ npm run preview
 #### Authors:
 
 - [Anbuselvan Rocky](https://fb.me/anburocky3)
-
-[![Deploy to GH Pages](https://github.com/anburocky3/vite-html-tailwind/actions/workflows/deploy.yml/badge.svg)](https://github.com/anburocky3/vite-html-tailwind/actions/workflows/deploy.yml)

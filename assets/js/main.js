@@ -16,6 +16,6 @@ xhr.onreadystatechange = function () {
 xhr.open(
   "GET",
   // "https://cors-anywhere.herokuapp.com/https://ipv4.icanhazip.com/"
-  "/ip"
+  "/Get-My-IP-Web-App/ip"
 );
 xhr.send();
