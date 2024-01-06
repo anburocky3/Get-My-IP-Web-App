@@ -1,9 +1,12 @@
-export default async (req, context) => {
-  const ipDataReq = await fetch("/ip");
-  const ipAddress = await ipDataReq.text();
-  console.log(ipAddress);
+const API_ENDPOINT = "https://ipv4.icanhazip.com";
 
-  return Response.json({
-    message: ipAddress,
-  });
+export default async (request, context) => {
+  try {
+    const response = await fetch(API_ENDPOINT);
+    const data = await response.text();
+    return Response.json({ data });
+  } catch (error) {
+    console.log(error);
+    return Response.json({ error: "Failed fetching data" }, { status: 500 });
+  }
 };
