@@ -1,34 +1,21 @@
 const ipAddressPlaceholder = document.querySelector("#ipAddress");
 // Get the ip address from this url: https://ipv4.icanhazip.com/
-import hello from "../../netlify/functions/index";
 
-async function fetchIP() {
-  const ipDataReq = await fetch("/ip");
-  const ipAddress = await ipDataReq.text();
-  // const ipData = await ipDataReq.json();
-  console.log(ipAddress);
-
-  const result = await hello();
-  console.log("s", result);
-}
-
-fetchIP();
-
-// let xhr = new XMLHttpRequest();
-
-// xhr.onreadystatechange = function () {
-//   if (this.readyState === 4) {
-//     if (this.status === 200) {
-//       ipAddressPlaceholder.textContent = xhr.responseText;
-//     } else {
-//       ipAddressPlaceholder.innerHTML =
-//         "<div class='alert-danger'>COULDN'T GET YOUR IP. <a href='/' class='retry-btn'>Retry</a></div>";
-//     }
-//   }
-// };
-// xhr.open(
-//   "GET",
-//   // "https://cors-anywhere.herokuapp.com/https://ipv4.icanhazip.com/"
-//   "/ip"
-// );
-// xhr.send();
+let xhr = new XMLHttpRequest();
+xhr.responseType = "json";
+xhr.onreadystatechange = function () {
+  if (this.readyState === 4) {
+    if (this.status === 200) {
+      ipAddressPlaceholder.textContent = xhr.response.data.trim();
+    } else {
+      ipAddressPlaceholder.innerHTML =
+        "<div class='alert-danger'>COULDN'T GET YOUR IP. <a href='/' class='retry-btn'>Retry</a></div>";
+    }
+  }
+};
+xhr.open(
+  "GET",
+  // "https://cors-anywhere.herokuapp.com/https://ipv4.icanhazip.com/"
+  "/.netlify/functions/ip"
+);
+xhr.send();
