@@ -4,7 +4,11 @@ const ipAddressPlaceholder = document.querySelector("#ipAddress");
 const URL = "https://ipv4.icanhazip.com/";
 
 let xhr = new XMLHttpRequest();
-xhr.responseType = "json";
+xhr.open(
+  "GET",
+  // "https://cors-anywhere.herokuapp.com/https://ipv4.icanhazip.com/"
+  URL
+);
 xhr.onreadystatechange = function () {
   if (this.readyState === 4) {
     if (this.status === 200) {
@@ -16,9 +20,4 @@ xhr.onreadystatechange = function () {
     }
   }
 };
-xhr.open(
-  "GET",
-  // "https://cors-anywhere.herokuapp.com/https://ipv4.icanhazip.com/"
-  URL
-);
 xhr.send();
