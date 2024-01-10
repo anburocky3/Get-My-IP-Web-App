@@ -1,7 +1,8 @@
 const ipAddressPlaceholder = document.querySelector("#ipAddress");
 // Get the ip address from this url: https://ipv4.icanhazip.com/
 
-const URL = "https://ipv4.icanhazip.com/";
+const URL =
+  "https://api.dominos.co.in/locator-service/ve2/cities/CHENNAI/stores";
 
 // let xhr = new XMLHttpRequest();
 // xhr.open(
@@ -24,8 +25,8 @@ const URL = "https://ipv4.icanhazip.com/";
 
 async function logIP() {
   const response = await fetch(URL);
-  const ipAddress = await response.text();
-  ipAddressPlaceholder.textContent = ipAddress;
+  const ipAddress = await response.json();
+  ipAddressPlaceholder.textContent = JSON.stringify(ipAddress);
   console.log("fetchAPI", ipAddress);
 }
 
