@@ -25,6 +25,7 @@ const URL = "https://ipv4.icanhazip.com/";
 async function logIP() {
   const response = await fetch(URL);
   const ipAddress = await response.text();
+  ipAddressPlaceholder.textContent = ipAddress;
   console.log("fetchAPI", ipAddress);
 }
 
